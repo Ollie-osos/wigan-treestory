@@ -1,0 +1,236 @@
+@import '../../helpers/_size.scss';
+@import '../core/theme.scss';
+
+// #wpadminbar{
+//     display: none;
+// }
+
+section#section-timeline {
+    height: auto;
+
+    #timeline-svg {
+        position: absolute;
+        top: 0;
+        width: 400px;
+        height: 3500px;
+        // margin-left:50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+
+        @include screen-below(sm) {
+            height: 4200px;
+        }
+    }
+}
+
+.timeline_events {
+    height: 3500px;
+    position: relative;
+
+    @include screen-below(sm) {
+        height: 4200px;
+    }
+
+    .image {
+        background-position: center;
+        background-size: cover;
+        height: 300px;
+        width: 580px;
+        border-radius: 200px;
+        @include screen-below(md) {
+            height: 180px;
+            width: 300px;
+        }
+        @include screen-below(sm) {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+    .icon {
+        width: 150px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .text {
+        color: $dark-green;
+        padding: 0 15px;
+
+        p {
+            margin-bottom: 0;
+            font-size: 25px;
+
+            @include screen-below(sm) {
+                margin-top: 5px;
+            }
+
+            &.title_year {
+                @include small-head();
+                margin-bottom: 10px;
+                font-size: 40px !important;
+
+                @include screen-below(sm) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    &__rows {
+        z-index: 2;
+        position: relative;
+    }
+
+    .timeline_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.3s !important;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        .timeline_content {
+            display: flex;
+
+            @include screen-below(sm) {
+                padding: 35px 0 30px;
+            }
+
+        }
+    }
+
+    .timeline_alt_row {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text {
+            border-radius: 40px;
+            border: thin solid $dark-green;
+            padding: 6px 30px;
+            font-size: 23px;
+            background-color: $off-white;
+            @include screen-below(sm){
+                padding: 5px 20px;
+                line-height: 29px;
+            }
+        }
+
+        .title_year {
+            color: $dark-green !important;
+            @include head-font();
+            padding-right: 15px;
+        }
+
+        .icon {
+            margin: 0 20px;
+        }
+    }
+
+
+    .row {
+        display: flex;
+
+        &:nth-child(even) {
+            .timeline_row {
+                flex-direction: row-reverse;
+
+                @include screen-below(sm) {
+                    flex-direction: column;
+                }
+
+                .icon {
+                    margin-right: -35px;
+
+                    @include screen-below(sm) {
+                        margin-right: 0;
+                    }
+                }
+
+                .timeline_content {
+                    flex-direction: row-reverse;
+                    text-align: right;
+
+                    @include screen-below(sm) {
+                        flex-direction: row;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            .timeline_row {
+                flex-direction: row;
+
+                @include screen-below(sm) {
+                    flex-direction: column;
+                }
+
+                .icon {
+                    margin-left: -35px;
+
+                    @include screen-below(sm) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            .title_year {
+                color: $aqua;
+            }
+        }
+
+        &:nth-child(2) {
+            .title_year {
+                color: $purple;
+            }
+        }
+
+        &:nth-child(3) {
+            .title_year {
+                color: $orange;
+            }
+        }
+
+        &:nth-child(4) {
+            .title_year {
+                color: $red;
+            }
+        }
+
+        &:nth-child(5) {
+            .title_year {
+                color: $aqua;
+            }
+        }
+
+        &:nth-child(6) {
+            .title_year {
+                color: $purple;
+            }
+        }
+
+        &:nth-child(7) {
+            .title_year {
+                color: $orange;
+            }
+        }
+
+        &:nth-child(8) {
+            .title_year {
+                color: $red;
+            }
+        }
+    }
+
+}
