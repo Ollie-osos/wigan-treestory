@@ -1,0 +1,441 @@
+@import '../../helpers/_size.scss';
+@import '../core/theme.scss';
+
+.accordion {
+    margin: 50px;
+    @include screen-below(md){
+        margin: 0;
+    }
+    dt {
+        padding: 20px 0;
+        border-top: 1px solid $dark-green;
+        border-bottom: 0;
+        @include head-font();
+        position: relative;
+        &:first-child {
+            border-top: none;
+        }
+
+        a {
+            display: block;
+            color: $red;
+            &::after {
+                border: 3px solid $red;
+                border-right: 0;
+                border-top: 0;
+                display: block;
+                height: 0.5em;
+                width: 0.5em;
+                content: ' ';
+                -webkit-transform: rotate(-45deg);
+                /* transform: rotate(-45deg); */
+                pointer-events: none;
+                margin-top: -0.435em;
+                right: 0;
+                top: 50%;
+                position: absolute;
+            }
+            &.open{
+                &::after {
+                    -webkit-transform: rotate(-225deg);
+                /* transform: rotate(-225deg); */
+                }
+            }
+        } 
+    }
+
+    dd {
+        border-top: 0;
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+        margin-top: -18px;
+
+        // &:last-of-type {
+        //     border-top: 1px solid white;
+        //     position: relative; 
+        //     top: -1px;
+        // }
+        p {
+            padding-bottom: 0;
+            margin-bottom: 15px;
+            // margin-top: -18px;
+        }
+    }
+}
+
+// swiffy slider 
+.swiffy-slider {
+    button {
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+
+// carousel
+.carousel-text {
+    li {
+        display: inline-flex;
+    }
+}
+
+
+/* The Modal (background) */
+.modal-single {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 30;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(3, 107, 102);
+    /* Fallback color */
+    background-color: rgba(3, 107, 102, 0.4);
+    
+    /* Black w/ opacity */
+    &.show{
+        display: block;
+    }
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 100px auto auto;
+    padding: 0;
+    border: none;
+    width: 80%;
+    position: relative;
+    /* The Close Button */
+    .close {
+        color: white !important;
+        right: 0;
+        top: -72px;
+        z-index: 3;
+        position: absolute;
+        font-size: 85px;
+        @include screen-below(sm){
+            top: -90px;
+        }
+    }
+
+    .close:hover,
+    .close:focus { 
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    } 
+    button.slider-nav {
+        background: transparent;
+        position: absolute !important;
+        top: 50%;
+    }
+    .swiffy-slider {
+        position: relative;
+        width: auto;
+        background: none;
+        button {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+    
+    .slider-container>* {
+        position: relative;
+        width: fit-content;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        background-color: white;
+        margin: 0 auto;
+        padding: 18px;
+    }
+}
+
+.image-modal{
+    cursor: pointer;
+    max-height: calc(100vh - 200px);
+    max-width: 100%;
+}
+
+
+// bruno's css
+.gm-style-iw {
+    padding: 0 !important;
+    height: auto !important;
+    max-height: unset !important;
+    background-color: $red !important;
+    transform: translate3d(15%, -74%, 0) !important;
+    border-radius: 0 !important;
+}
+
+.gm-style-iw-d {
+    height: auto !important;
+    max-height: unset !important;
+    overflow: hidden !important;
+}
+
+.marker_info {
+    img {
+        min-height: 150px;
+        width: 100%;
+    }
+
+    .marker_name {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        padding: 0px 6px 4px;
+    }
+}
+
+
+.gm-style-iw-tc {
+    display: none;
+}
+
+// .white-dark{
+//   background-color:#efece4;
+// }
+
+@mixin map-over-height() {
+    height: 620px;
+
+    @include screen-above(sm) {
+        height: 510px;
+    }
+
+    @include screen-above(md) {
+        height: 800px;
+    }
+}
+
+#over {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0px;
+    color: $off-white;
+    /*extra stuff you need*/
+    height: auto;
+    transition: 0.4s ease-in-out;
+    background-image: url(../img/new-map.jpg);
+    background-size: cover;
+    background-position: center;
+    @include map-over-height();
+
+    .row {
+        padding: 0px !important;
+        height: 100% !important;
+        @include screen-below(sm){
+            flex-direction: column-reverse;
+        }
+    }
+    .explore-overlay{
+        @include screen-below(sm){
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .col-sm-6:first-child .btn {
+        top: 50%;
+        bottom: 50%;
+        position: relative;
+    }
+
+    .label {
+        background: $dark-green;
+
+        .label-inside {
+            padding: 50px 25px;
+        }
+
+        @include map-over-height();
+    }
+
+}
+
+.treestories-map {
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    @include map-over-height();
+
+}
+
+.btn#explore {
+    @include screen-above(md){
+        margin-left: 40px;
+    }
+}
+
+.label p {
+    color: white;
+}
+
+.map-container {
+    margin-top: 0px !important;
+    position: relative;
+}
+
+.acf-form {
+    label {
+        @include head-font ();
+        font-weight: bold;
+    }
+
+    input#audio,
+    input#photos {
+        background-color: $red;
+    }
+
+    textarea {
+        border-color: $red;
+    }
+    p{
+        @include screen-below(sm){
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+    
+}
+
+.upload-input-1{
+    display: flex;
+    @include screen-below(sm){
+        padding-top:  20px !important;
+        flex-direction: column;
+    }
+}
+.upload-file{
+    @include screen-below(sm){
+        padding-top: 0 !important;
+    }
+}
+.upload-header{
+    @include screen-above(sm){
+        padding-bottom: 50px !important;
+        padding-top: 50px !important;
+    }
+}
+.upload-check{
+    padding-top: 0 !important;
+}
+
+.treestories-images {
+    img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.treestories-text {
+    padding-left: 35px !important;
+}
+
+
+.heateor_sss_svg {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.post-ratings img {
+    height: 35px;
+    width: 35px;
+}
+
+.large-checkbox {
+    transform: scale(3);
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px !important;
+    .image{
+        padding-right: 20px;
+        width: 100%;
+        img{
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+
+//  like and share buttons
+.heateor_sss_facebook .heateor_sss_svg, .heateor_sss_button_twitter .heateor_sss_svg, .heateor_sss_email .heateor_sss_svg {
+    background-color: $red !important;
+    transition: 0.3s all linear;
+    &:hover{
+        background-color: $dark-green !important; 
+    }
+}
+.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover, .heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{
+    background-color: $dark-green !important;
+}
+
+.single-share, .heateor_sss_sharing_container.heateor_sss_horizontal_sharing{
+    display: inline-block;
+    margin-top: 10px;
+    span.small{
+        position: relative;
+        top: -17px;
+        left: 15px;
+    }
+}
+.single-share{
+    width: 100%;
+}
+.post-ratings, .single-like {
+    display: inline;
+    color: white;
+    span{
+        top: -8px;
+        position: relative;
+        padding-left: 15px;
+        color: $dark-green;
+    }
+}
+
+
+// news
+
+.news-item{
+    text-align: center;
+    padding-bottom: 30px !important;
+    h3{
+        font-size: 24px;
+    }
+    a{
+        color: $dark-green;
+        &:hover{
+            color: $red;
+        }
+    }
+}
+.featured-news {
+    a{
+        color: $dark-green;
+        &:hover{
+            color: $red;
+        }
+    }
+}

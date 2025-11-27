@@ -1,0 +1,37 @@
+@import '../../helpers/_selectors.scss';
+@import "../core/theme.scss";
+
+/* LINKS */
+
+a {
+    color: $red;   
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $dark-green;
+    }
+
+    &.underline {
+        text-decoration: underline; 
+    }
+}
+
+.subtitle a {
+    padding: 0; /* Removes weird offset in subtitle links */
+}
+
+#{$header-selectors},
+article,
+blockquote {
+    & a {
+        display: inline;
+    }
+}
+
+/* Remove uneeded space since buttons have their own padding */
+a .btn,
+a button,
+[type='submit'] a {
+    margin-bottom: 0;
+}

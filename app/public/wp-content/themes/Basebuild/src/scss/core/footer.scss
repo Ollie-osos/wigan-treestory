@@ -1,0 +1,92 @@
+@import "../core/theme.scss";
+
+/* FOOTER */
+.footer {
+    background-color: $off-white;
+    padding: 2.5rem 0;
+    text-align: left;
+    margin-top: 0rem;
+    width: 100%;
+
+    &.footer--fixed {
+        bottom: 0;
+        position: fixed; 
+    }
+
+    ul {
+        column-count: 1;
+        @include screen-above(md){
+            column-count: 2;
+        }
+        .menu-item a, a {
+            color: $dark-green;
+            @include small-head();
+            transition: all 0.3s linear;
+            padding: 0;
+            line-height: 35px;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    p {
+        color: $dark-green;
+    }
+
+    ul {
+        margin: 0.5rem 0; /* Remove the left margin seen in global style */
+    }
+    .small-text {
+        font-size: 14px;
+    }
+
+    .partners-logos{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        a:link, a:hover, a:active {
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        img {
+            max-width: 85px;
+            @include screen-below(sm){
+                max-width: 70px;
+            }
+        }
+        @include screen-below(md){
+            justify-content: center;
+            padding-top: 25px;
+        }
+    }
+    #footer-logo img{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+#back-top{
+    position: fixed;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $dark-green;
+    color: $red;
+    font-size: 18px;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    @include screen-below(md){
+        bottom: 25px;
+        right: 25px;
+    }
+}

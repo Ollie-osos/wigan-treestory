@@ -1,0 +1,98 @@
+@import '../../helpers/_size.scss';
+$yellow: #fff;
+$black: #101820;
+
+.high-contrast{
+    color: $black !important;
+    background-color: $yellow !important;
+    a{
+        color: $black;
+        text-decoration: underline; 
+    }
+    .header, .timeline_events .timeline_alt_row .text{
+        background-color: $yellow !important;
+    }
+    #over p, .off-white-text, .off-white-text p, ul.dropdown-menu .menu-item a{
+        color: $yellow !important;
+    }
+    p, article, blockquote, .label p, ul .menu-item a, .footer ul .menu-item a, .footer ul a, .featured-news a, .how-to h3, .dark-green-text, .dark-green-text p, .accordion dt a, .timeline_events .text, .post-ratings span, .single-like span {
+        color: $black !important;
+    }
+    .bg-off-white, .section.off-white, .bg-white, .section.white, .footer, .bg-pattern{
+        background-color: $yellow !important;
+        color: $black !important;
+    }
+    .bg-dark-green, .section.dark-green, #over .label, .header .dropdown-background, #back-top {
+        background-color: $black !important;
+        color: $yellow !important;
+    }
+    .btn, button, [type="submit"], [type="reset"], [type="button"]{
+        background-color: $black !important;
+        color: $yellow !important;
+        &:hover{
+            background-color: $yellow !important;
+            color: $black !important;
+        }
+    }
+    .nav-item.has-sub > a::after, .timeline_events .timeline_alt_row .text{
+        border-color: $black !important;
+    }
+    img {
+        filter: grayscale(100%);
+    }
+    .bg-pattern, #over, .treestories-map div{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+
+    #over{
+        .btn, button, [type="submit"], [type="reset"], [type="button"]{
+            background-color: $yellow !important;
+            color: $black !important;
+            &:hover{
+                background-color: $black !important;
+                color: $yellow !important;
+            }
+        }
+    }
+
+    div.background-image, section.background-image {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        background-image: unset !important;
+        background-color: $black !important;
+        .btn, button, [type="submit"], [type="reset"], [type="button"]{
+            background-color: $yellow !important;
+            color: $black !important;
+            &:hover{
+                background-color: $black !important;
+                color: $yellow !important;
+            }
+        }
+    }
+    section.home{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        background-image: url(https://treestory.me/wp-content/uploads/2022/10/new-map-1600x1663.jpg) !important;
+        .btn, button, [type="submit"], [type="reset"], [type="button"]{
+            background-color: $black !important;
+            color: $yellow !important;
+            &:hover{
+                background-color: $yellow !important;
+                color: $black !important;
+            }
+        }
+    }
+
+    .heateor_sss_facebook .heateor_sss_svg, .heateor_sss_button_twitter .heateor_sss_svg, .heateor_sss_email .heateor_sss_svg, .heateor_sss_horizontal_sharing span.heateor_sss_svg:hover, .heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{
+        background-color: $black !important
+    }
+    @include screen-below('sm') {
+        .nav-btn span{
+            background-color: $black !important;
+        }
+        ul.dropdown-menu .menu-item a{
+            color: $black !important;
+        }
+    }
+}
