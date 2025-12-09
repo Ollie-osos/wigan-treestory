@@ -22,10 +22,10 @@ if ($footer_cta) {
                    
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 text mobile-text-center off-white-text">
+            <div class="col-md-6 col-sm-12 text mobile-text-center off-white-text" data-sal="slide-up" data-sal-duration="1000">
                 <h3 class="pb-5"><?php echo $footer_text; ?></h3>
                 <?php if ($footer_cta) {
-                    echo '<div><a href="' . $link_url_1 . '" target="' . $link_target_1 . '" class="btn">' . $link_title_1 . '</a></div>';
+                    echo '<div><a href="' . $link_url_1 . '" target="' . $link_target_1 . '" class="btn" data-sal="slide-up" data-sal-duration="1000">' . $link_title_1 . '</a></div>';
                 } ?>
             </div>
         </div>

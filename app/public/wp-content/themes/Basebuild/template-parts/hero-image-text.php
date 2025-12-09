@@ -12,17 +12,17 @@ $hero_mobile_image = get_field('hero_mobile_image');
 
 <section class="hero-image-text <?php echo $hero_background_colour; ?> background-image" style="background-image:url('<?php echo $hero_background_image['sizes']['large']; ?>');" >
     <div class="container">
-        <div class="row">
+        <div class="row" >
             <div class="col-md-6 col-sm-12 text mobile-text-center">
                 <?php if ($hero_image_text['sizes']['medium']) {
-                    echo '<img src="' . $hero_image_text['sizes']['medium'] . '" alt="' . $hero_image_text['alt'] . '">';
+                    echo '<img src="' . $hero_image_text['sizes']['medium'] . '" alt="' . $hero_image_text['alt'] . '" data-sal="slide-up" data-sal-duration="1000">';
                 } ?>
                 <br><br>
-                <?php echo $hero_text; ?>
+                <div data-sal="slide-up" data-sal-duration="1000"><?php echo $hero_text; ?></div>
                 
             </div>
             <div class="col-md-6 col-sm-12 image">
-                <div class="u-none-md u-block-sm">
+                <div class="u-none-md u-block-sm" data-sal="slide-up" data-sal-duration="1000">
                     <?php if ($hero_mobile_image['sizes']['medium']) {
                         echo '<img src="' . $hero_mobile_image['sizes']['medium'] . '" alt="' . $hero_mobile_image['alt'] . '">';
                     } ?>

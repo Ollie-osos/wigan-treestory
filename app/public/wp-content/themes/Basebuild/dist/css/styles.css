@@ -2952,6 +2952,12 @@ p.small {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer ul li {
   display: inline-flex;
   align-items: center;
@@ -2966,6 +2972,13 @@ p.small {
 }
 .footer ul li:last-child {
   border-right: none;
+}
+@media screen and (max-width: 767px) {
+  .footer ul li {
+    display: block;
+    padding: 0.5rem 0;
+    border-right: none;
+  }
 }
 .footer ul .menu-item a, .footer ul a {
   color: #111;
@@ -3004,6 +3017,9 @@ p.small {
   justify-content: space-between;
   padding-top: 30px;
 }
+.footer .partners-logos > * {
+  padding-bottom: 20px;
+}
 .footer .partners-logos a:link, .footer .partners-logos a:hover, .footer .partners-logos a:active {
   text-decoration: none;
   cursor: pointer;
@@ -3012,19 +3028,22 @@ p.small {
 .footer .partners-logos a:link:last-child, .footer .partners-logos a:hover:last-child, .footer .partners-logos a:active:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 767px) {
+  .footer .partners-logos a:link, .footer .partners-logos a:hover, .footer .partners-logos a:active {
+    margin-right: 0;
+  }
+}
 .footer .partners-logos img {
   max-width: 100%;
   max-height: 100px;
-}
-@media screen and (max-width: 767px) {
-  .footer .partners-logos img {
-    max-width: 70px;
-  }
 }
 @media screen and (max-width: 1023px) {
   .footer .partners-logos {
     justify-content: center;
     padding-top: 25px;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 .footer #footer-logo img {
@@ -3959,7 +3978,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   /* The container that contains all the header menu components. Child of header */
   /* Static header at the top of the screen */
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header {
     padding: 0 2rem;
     height: 100px;
@@ -3990,7 +4009,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   justify-content: flex-end;
   cursor: pointer;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .header #aa {
     justify-content: center;
   }
@@ -4036,7 +4055,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   font-size: 16px;
   display: block;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header a.btn {
     display: none;
   }
@@ -4069,7 +4088,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   opacity: 1;
   z-index: 100;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .header .dropdown-background.dropdown-shown {
     display: none;
   }
@@ -4198,7 +4217,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   white-space: nowrap;
   color: #111;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .nav-item .dropdown-menu > li > a {
     color: #CB4053;
     font-size: 17px;
@@ -4243,7 +4262,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   top: 50%;
   position: absolute;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav-item.has-sub > a::after {
     right: -4px;
     top: 18px;
@@ -4264,7 +4283,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   opacity: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -4394,7 +4413,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     z-index: 200;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   /* Add scrolling support in header */
   .header {
     flex-direction: column;
@@ -4420,12 +4439,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
   /* Hide drop down menu items */
   /* No need for JS to show dropdown menu on mobile devices now */
 }
-@media screen and (max-width: 767px) and (min-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   .header .header-nav .nav-item {
     padding: 1rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .header .header-nav .nav-item > a {
     padding: 0;
     width: 100%; /* Stretch the link to span the entire list item */
@@ -4553,7 +4572,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav-right {
     justify-content: unset;
     height: unset;
@@ -4563,7 +4582,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     overflow-y: unset;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .nav-right {
     margin: 100px 0 0;
   }
@@ -4574,7 +4593,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 .nav-right .nav-item {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav-right .nav-item {
     width: auto;
     margin-right: 0.75rem;

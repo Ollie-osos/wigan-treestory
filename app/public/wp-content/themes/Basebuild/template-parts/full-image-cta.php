@@ -14,7 +14,7 @@ if ($full_cta) {
     <section class="full-image-cta <?php echo $page; ?> full background-image u-text-center u-center" style="background-image:url('<?php echo $full_background_image['sizes']['large']; ?>');">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12" data-sal="slide-up" data-sal-duration="1000">
                     <a href="<?php echo $link_url_1; ?>" target="<?php echo $link_target_1; ?>" class="btn large"><?php echo $link_title_1; ?></a>
                 </div>
             </div>

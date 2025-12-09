@@ -28,7 +28,7 @@
     transition: all 0.3s;
     display: flex;
     position: relative;
-    @include screen-above('sm'){
+    @include screen-above('md'){
         padding: 0 2rem;
         height: 100px;
         justify-content: center;
@@ -45,7 +45,7 @@
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
-        @include screen-below('sm'){
+        @include screen-below('md'){
             justify-content: center;
         }
         @include screen-below('md'){
@@ -87,7 +87,7 @@
             // &:hover, &:active {
             //     color: $purple;
             // }
-            @include screen-above(sm){
+            @include screen-above(md){
                 display: none;
             }
             @include screen-above(md){
@@ -116,7 +116,7 @@
             opacity: 1;
             z-index: 100;
             // transform: translateY(75px);
-            @include screen-below(sm){
+            @include screen-below(md){
                 display: none;
             }
         }
@@ -254,7 +254,7 @@
             line-height: 1.42857143;
             white-space: nowrap;
             color: $black;
-            @include screen-below(sm){
+            @include screen-below(md){
                 color: $red;
                 font-size: 17px;
             }
@@ -306,7 +306,7 @@
             right: 12px;
             top: 50%;
             position: absolute;
-            @include screen-above('sm'){
+            @include screen-above('md'){
                 right: -4px;
                 top: 18px;
             }
@@ -354,7 +354,7 @@
     white-space: nowrap;
 }
 
-@include screen-above('sm'){
+@include screen-above('md'){
     .header {
         display: flex;
         flex-direction: column;
@@ -467,7 +467,7 @@
     }
 }
 
-@include screen-below('sm') {
+@include screen-below('md') {
     /* Add scrolling support in header */
     .header {
         flex-direction: column;
@@ -630,7 +630,7 @@
     overflow-y: scroll;
     // height: calc(100vh - 100px);
     overflow-x: hidden;
-    @include screen-above('sm'){
+    @include screen-above('md'){
         justify-content: unset; 
         height: unset;
         display: unset;
@@ -638,7 +638,7 @@
         overflow-x: unset;
         overflow-y: unset;
     }
-    @include screen-below(sm){
+    @include screen-below(md){
         margin: 100px 0 0;
     }
     .nav-search{
@@ -646,7 +646,7 @@
     }
     .nav-item{
         width: 100%;
-        @include screen-above('sm'){
+        @include screen-above('md'){
             width: auto;
             margin-right: 0.75rem;
         }
