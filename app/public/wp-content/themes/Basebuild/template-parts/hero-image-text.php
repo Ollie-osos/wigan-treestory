@@ -17,6 +17,7 @@ $hero_mobile_image = get_field('hero_mobile_image');
                 <?php if ($hero_image_text['sizes']['medium']) {
                     echo '<img src="' . $hero_image_text['sizes']['medium'] . '" alt="' . $hero_image_text['alt'] . '">';
                 } ?>
+                <br><br>
                 <?php echo $hero_text; ?>
                 
             </div>

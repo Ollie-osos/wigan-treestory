@@ -5,21 +5,16 @@ function footer_custom_javascript()
   if (is_page_template('page-templates/page-uploads.php')) { ?>
 
     <script>
-      /**
-       * @license
-       * Copyright 2019 Google LLC. All Rights Reserved.
-       * SPDX-License-Identifier: Apache-2.0
-       */
       function initMap() {
-        const LIVERPOOL_BOUNDS = {
-          east: -2.261425,
-          west: -3.881425,
-          south: 53.230759,
-          north: 53.630759,
+        const WIGAN_BOUNDS = {
+          east: -2.501425,
+          west: -2.741425,
+          south: 53.460759,
+          north: 53.620759,
         };
         const myLatlng = {
-          lat: 53.40503858570688,
-          lng: -3.001243779405298
+          lat: 53.5403858570688,
+          lng: -2.81243779405298
         };
         const map = new google.maps.Map(document.getElementById("map"), {
           // change the map id when live to our gmap api id
@@ -28,7 +23,7 @@ function footer_custom_javascript()
           zoom: 11,
           center: myLatlng,
           restriction: {
-            latLngBounds: LIVERPOOL_BOUNDS,
+            latLngBounds: WIGAN_BOUNDS,
             strictBounds: false,
           },
           disableDefaultUI: true,

@@ -78,7 +78,7 @@ ul {
 
     /* Style menu items */
     .menu-item a {
-        color: $dark-green;
+        color: $black;
         display: block;
         padding: 0.5em 0.75em;
         border-radius: 3px;
@@ -94,9 +94,12 @@ ul {
         }
     }
 
-    .menu-item:hover > a, .menu-item.selected > a {       
+    .menu-item:hover > a, .menu-item.selected > a, .menu-item.active > a {       
         color: $red;
         transition: all var(--animation-duration);
+        &::after{
+            border-color: $red;
+        }
     }
 
     /* Style sub menus inside a menu */

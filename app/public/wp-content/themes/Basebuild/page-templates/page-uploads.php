@@ -216,7 +216,7 @@ get_header(); ?>
                         <input class="input--lg large-checkbox" type="checkbox" id="first_time" name="acf[first_time]">
                     </div>
                     <div class="col-sm-10 col-xs-10 upload-check">
-                        <label for="first_time"> Is this the first time you have engaged with either Open Eye Gallery or dot-art?</label>
+                        <label for="first_time">Is this the first time you have engaged with either Open Eye Gallery or dot-art?</label>
                     </div>
                 </div>
                 <div class="row">

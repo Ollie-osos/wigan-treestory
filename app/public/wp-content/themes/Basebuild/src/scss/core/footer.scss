@@ -14,13 +14,38 @@
     }
 
     ul {
-        column-count: 1;
-        @include screen-above(md){
-            column-count: 2;
+        margin: 0.5rem 0; /* Remove the left margin seen in global style */
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        li {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1rem;
+            border-right: 2px solid $black;
+
+            /* Ensure no left border on the first item (in case of other global rules) */
+            &:first-child {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            /* Remove right border from the last item */
+            &:last-child {
+                border-right: none;
+            }
         }
+
         .menu-item a, a {
-            color: $dark-green;
-            @include small-head();
+            color: $black;
+            font-size: 14pt;
+            @include head-font();
+            @include screen-above(md){
+                font-size: 16pt;
+            }
             transition: all 0.3s linear;
             padding: 0;
             line-height: 35px;
@@ -31,20 +56,23 @@
     }
 
     p {
-        color: $dark-green;
+        color: $black;
     }
 
-    ul {
-        margin: 0.5rem 0; /* Remove the left margin seen in global style */
-    }
+    /* (ul styles consolidated above) */
     .small-text {
         font-size: 14px;
+        line-height: 22px;
+        @include screen-above(sm){
+            max-width: 200px;
+        }
     }
 
     .partners-logos{
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        padding-top: 30px;
         a:link, a:hover, a:active {
             text-decoration: none;
             cursor: pointer;
@@ -54,7 +82,8 @@
             }
         }
         img {
-            max-width: 85px;
+            max-width: 100%;
+            max-height: 100px;
             @include screen-below(sm){
                 max-width: 70px;
             }
@@ -75,8 +104,8 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    background-color: $dark-green;
-    color: $red;
+    background-color: $purple;
+    color: $black;
     font-size: 18px;
     bottom: 50px;
     right: 50px;

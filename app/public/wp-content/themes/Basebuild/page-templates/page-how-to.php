@@ -19,8 +19,7 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-12 col-md-6 image u-block-md u-none-sm">
                     <div class="videoWrapper">
-                        <!-- <iframe src="https://www.youtube.com/embed/y-EsNhGUJOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <iframe src="https://www.youtube.com/embed/RJaXonAirHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/RJaXonAirHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

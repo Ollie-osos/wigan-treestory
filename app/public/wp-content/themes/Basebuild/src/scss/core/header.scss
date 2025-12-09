@@ -41,15 +41,25 @@
     }
 
     #aa{
-        margin-top: 9px;
+        margin-top: 6px;
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
         @include screen-below('sm'){
             justify-content: center;
         }
+        @include screen-below('md'){
+            margin-top: 20px;
+        }
+        span{
+            margin-left: 6px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
     }
     #contrast-btn{
+        width: 22px;
         img{
             height: 24px;
             width: auto;
@@ -57,7 +67,7 @@
     }
 
     a {
-        color: $dark-green;
+        color: $black;
         @include head-font(); 
         &:hover, &:active {
             color: $red;
@@ -68,15 +78,15 @@
             }
         }
         &.btn{
-            color: white;
+            color: black;
             height: 52px;
             top: 8px;
             position: relative;
             font-size: 16px;
             display: block;
-            &:hover, &:active {
-                color: $red;
-            }
+            // &:hover, &:active {
+            //     color: $purple;
+            // }
             @include screen-above(sm){
                 display: none;
             }
@@ -95,7 +105,7 @@
     .dropdown-background{
         height: 0px;
         width: 100vw;
-        background-color: $red;
+        background-color: $purple;
         position: absolute;
         opacity: 0;
         left: 0;
@@ -164,7 +174,7 @@
 }
 
 #nav-logo{
-    width: 150px;
+    width: 180px;
 }
 
 /* Styles for header menu (aka the nav bar) */
@@ -243,7 +253,7 @@
             clear: both;
             line-height: 1.42857143;
             white-space: nowrap;
-            color: white;
+            color: $black;
             @include screen-below(sm){
                 color: $red;
                 font-size: 17px;
@@ -258,7 +268,7 @@
         & > li:hover a, & > li:active a{
             transition: all 0.3s;
             text-decoration: underline;
-            color: $dark-green;
+            color: $black;
         }
 
         & > li:last-child {
@@ -282,7 +292,7 @@
         /* Dropdown menu location adjustment located below for sizes above phones */
         /* Dropdown menu indicator */
         &::after {
-            border: 2px solid $dark-green; /* Must be first to create the triangle shape */
+            border: 2px solid $purple; /* Must be first to create the triangle shape */
             border-right: 0; /* Create the triangle effect */
             border-top: 0;
             display: block;
@@ -298,11 +308,16 @@
             position: absolute;
             @include screen-above('sm'){
                 right: -4px;
-                top: 21px;
-            }
-            @include screen-above('lg'){
-                right: -4px;
                 top: 18px;
+            }
+            // @include screen-above('lg'){
+            //     right: -4px;
+            //     top: 18px;
+            // }
+        }
+        &:hover{
+            &::after {
+                color: $red;
             }
         }
     }
@@ -387,7 +402,7 @@
                 right: 0;
             }
             ul .menu-item a.is-active{
-                color: $red;
+                color: $purple;
             }
 
         }
@@ -493,7 +508,7 @@
         .dropdown-menu {
 
             ul .menu-item:hover > a{
-                background-color: transparent;
+                // background-color: transparent;
             }
             /* Hide the menu by default in mobile view (overflow on header-right can expose it) */
             display: none;

@@ -111,7 +111,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
 select {
     @include cirrus-input();
 
-    border-color: $red;
+    border-color: $purple;
     max-height: 48px;
     /* Search field */
     &[type='search'],

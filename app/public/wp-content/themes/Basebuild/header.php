@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="header-top">
 				<div class="header-brand">
-					<div class="nav-item no-hover"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.png" id="nav-logo" alt="Tree story logo" /></a></div>
+					<div class="nav-item no-hover"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-wigan.png" id="nav-logo" alt="Tree story logo" /></a></div>
 					<div class="nav-item nav-btn" id="header-btn"><span></span><span></span><span></span></div>
 				</div>
 				<div class="header-nav" id="header-menu">
@@ -36,9 +36,9 @@
 					<div class="u-flex u-flex-column">
 						<div><a href="/share" class="btn small">Share your TreeStory</a></div>
 						<div id="aa">
-							<span onclick="increaseFontSize()" style="font-size: 20px; font-weight: bold">A+&nbsp;&nbsp;</span>
-							<span onclick="decreaseFontSize()" style="font-size: 20px; font-weight: bold">A- </span>
-							<span id="contrast-btn">&nbsp;&nbsp;<img src="<?php echo get_template_directory_uri(); ?>/dist/img/contrast.svg" id="contrast-icon" alt="Tree story hig contrast" /></span>
+							<span onclick="increaseFontSize()" style="font-size: 20px; font-weight: bold">A+  </span>
+							<span onclick="decreaseFontSize()" style="font-size: 20px; font-weight: bold">A-  </span>
+							<span id="contrast-btn"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/contrast.svg" id="contrast-icon" alt="Tree story hig contrast" /></span>
 						</div>
 
 					</div>

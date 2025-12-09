@@ -18,9 +18,9 @@
     cursor: pointer;
     text-align: center;
     transition: all var(--animation-duration);
-    background-color: $red;
+    background-color: $purple;
     border: none;
-    color: $white;
+    color: $black;
     font-size: 25pt;
     text-transform:none;
     margin-bottom: 1rem;
@@ -35,8 +35,8 @@
         display: inline-block;
     }
     &:hover, &:active {
-        background-color: $dark-green;
-        color: $red;
+        background-color: $red;
+        color: $black;
     }
 
     &:focus {
