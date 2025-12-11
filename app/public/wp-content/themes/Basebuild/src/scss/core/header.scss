@@ -70,7 +70,7 @@
         color: $black;
         @include head-font(); 
         &:hover, &:active {
-            color: $red;
+            color: $purple;
         }
         @include screen-above('md'){
             &:hover, &:active {
@@ -84,9 +84,9 @@
             position: relative;
             font-size: 16px;
             display: block;
-            // &:hover, &:active {
-            //     color: $purple;
-            // }
+            &:hover, &:active {
+                color: $white;
+            }
             @include screen-above(md){
                 display: none;
             }
@@ -255,7 +255,7 @@
             white-space: nowrap;
             color: $black;
             @include screen-below(md){
-                color: $red;
+                color: $purple;
                 font-size: 17px;
             }
         }
@@ -317,12 +317,12 @@
         }
         &:hover{
             &::after {
-                color: $red;
+                color: $purple;
             }
         }
     }
     &.has-sub.active > a:after {
-        border-color: $red; 
+        border-color: $purple; 
         -webkit-transform: rotate(-225deg);
         transform: rotate(-225deg);
         margin-top: -3px;
@@ -535,7 +535,7 @@
         margin-left: auto;
 
         span {
-            background-color: $red;
+            background-color: $purple;
             display: block;
             height: 2px;
             left: 50%;

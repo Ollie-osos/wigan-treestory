@@ -4,12 +4,13 @@
 /* LINKS */
 
 a {
-    color: $purple;   
-    text-decoration: none;
+    color: $black;   
+    text-decoration: underline;
     transition: all 0.3s;
 
     &:hover {
-        color: $red;
+        color: $black;
+        text-decoration: none;
     }
 
     &.underline {

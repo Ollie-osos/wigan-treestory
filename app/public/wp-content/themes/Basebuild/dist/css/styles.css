@@ -178,7 +178,7 @@ fieldset legend {
 }
 .accordion dt {
   padding: 20px 0;
-  border-top: 1px solid #036B66;
+  border-top: 1px solid #AA83CC;
   border-bottom: 0;
   font-family: fatfrank, sans-serif;
   font-weight: 400;
@@ -191,10 +191,10 @@ fieldset legend {
 }
 .accordion dt a {
   display: block;
-  color: #CB4053;
+  color: #111;
 }
 .accordion dt a::after {
-  border: 3px solid #CB4053;
+  border: 3px solid #AA83CC;
   border-right: 0;
   border-top: 0;
   display: block;
@@ -357,7 +357,7 @@ fieldset legend {
   /*extra stuff you need*/
   height: auto;
   transition: 0.4s ease-in-out;
-  background-image: url(../img/new-map.jpg);
+  background-image: url(../img/new-wigan-map.png);
   background-size: cover;
   background-position: center;
   height: 620px;
@@ -1099,24 +1099,24 @@ section#section-timeline #timeline-svg {
   position: absolute;
   top: 0;
   width: 400px;
-  height: 3500px;
+  height: 2300px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
 }
 @media screen and (max-width: 767px) {
   section#section-timeline #timeline-svg {
-    height: 4200px;
+    height: 3000px;
   }
 }
 
 .timeline_events {
-  height: 3500px;
+  height: 2300px;
   position: relative;
 }
 @media screen and (max-width: 767px) {
   .timeline_events {
-    height: 4200px;
+    height: 3000px;
   }
 }
 .timeline_events .image {
@@ -1191,6 +1191,7 @@ section#section-timeline #timeline-svg {
 }
 .timeline_events .timeline_row .timeline_content {
   display: flex;
+  z-index: 10;
 }
 @media screen and (max-width: 767px) {
   .timeline_events .timeline_row .timeline_content {
@@ -1538,6 +1539,7 @@ h6 {
 h1, .h1, h2, .h2 {
   font-size: 35pt;
   line-height: 50px;
+  margin-bottom: 1.7rem;
   font-family: fatfrank, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1547,6 +1549,7 @@ h1, .h1, h2, .h2 {
   h1, .h1, h2, .h2 {
     font-size: 40pt;
     line-height: 61px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1557,6 +1560,7 @@ h3, .h3 {
   font-weight: 400;
   font-style: normal;
   word-spacing: 5px;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 1024px) {
   h3, .h3 {
@@ -1915,6 +1919,7 @@ p.small {
   text-transform: none;
   margin-bottom: 1rem;
   outline: none;
+  text-decoration: none;
   /* Base States */
   font-family: fatfrank, sans-serif;
   font-weight: 400;
@@ -1942,8 +1947,8 @@ p.small {
   }
 }
 .btn:hover, .btn:active, button:hover, button:active, [type=submit]:hover, [type=submit]:active, [type=reset]:hover, [type=reset]:active, [type=button]:hover, [type=button]:active {
-  background-color: #CB4053;
-  color: #111;
+  background-color: #111;
+  color: #fff;
 }
 .btn:focus, button:focus, [type=submit]:focus, [type=reset]:focus, [type=button]:focus {
   outline: none;
@@ -2507,6 +2512,7 @@ h6 {
 h1, .h1, h2, .h2 {
   font-size: 35pt;
   line-height: 50px;
+  margin-bottom: 1.7rem;
   font-family: fatfrank, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2516,6 +2522,7 @@ h1, .h1, h2, .h2 {
   h1, .h1, h2, .h2 {
     font-size: 40pt;
     line-height: 61px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2526,6 +2533,7 @@ h3, .h3 {
   font-weight: 400;
   font-style: normal;
   word-spacing: 5px;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 1024px) {
   h3, .h3 {
@@ -2987,6 +2995,7 @@ p.small {
   font-weight: 400;
   font-style: normal;
   word-spacing: 5px;
+  text-decoration: none;
   transition: all 0.3s linear;
   padding: 0;
   line-height: 35px;
@@ -2997,7 +3006,7 @@ p.small {
   }
 }
 .footer ul .menu-item a:hover, .footer ul a:hover {
-  color: #CB4053;
+  color: #AA83CC;
 }
 .footer p {
   color: #111;
@@ -3021,7 +3030,6 @@ p.small {
   padding-bottom: 20px;
 }
 .footer .partners-logos a:link, .footer .partners-logos a:hover, .footer .partners-logos a:active {
-  text-decoration: none;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -3066,6 +3074,11 @@ p.small {
   justify-content: center;
   cursor: pointer;
   z-index: 100;
+  transition: all 0.3s ease;
+}
+#back-top:hover {
+  background-color: #111;
+  color: #fff;
 }
 @media screen and (max-width: 1023px) {
   #back-top {
@@ -4040,7 +4053,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   word-spacing: 5px;
 }
 .header a:hover, .header a:active {
-  color: #CB4053;
+  color: #AA83CC;
 }
 @media screen and (min-width: 1024px) {
   .header a:hover, .header a:active {
@@ -4054,6 +4067,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
   position: relative;
   font-size: 16px;
   display: block;
+}
+.header a.btn:hover, .header a.btn:active {
+  color: #fff;
 }
 @media screen and (min-width: 1024px) {
   .header a.btn {
@@ -4219,7 +4235,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 @media screen and (max-width: 1023px) {
   .nav-item .dropdown-menu > li > a {
-    color: #CB4053;
+    color: #AA83CC;
     font-size: 17px;
   }
 }
@@ -4269,10 +4285,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
   }
 }
 .nav-item.has-sub > a:hover::after {
-  color: #CB4053;
+  color: #AA83CC;
 }
 .nav-item.has-sub.active > a:after {
-  border-color: #CB4053;
+  border-color: #AA83CC;
   -webkit-transform: rotate(-225deg);
   transform: rotate(-225deg);
   margin-top: -3px;
@@ -4482,7 +4498,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     /* Hamburger button on active */
   }
   .nav-btn span {
-    background-color: #CB4053;
+    background-color: #AA83CC;
     display: block;
     height: 2px;
     left: 50%;
@@ -5565,12 +5581,13 @@ section {
 
 /* LINKS */
 a {
-  color: #AA83CC;
-  text-decoration: none;
+  color: #111;
+  text-decoration: underline;
   transition: all 0.3s;
 }
 a:hover {
-  color: #CB4053;
+  color: #111;
+  text-decoration: none;
 }
 a.underline {
   text-decoration: underline;
@@ -5747,6 +5764,7 @@ ul .menu-item a {
   font-weight: 400;
   font-style: normal;
   word-spacing: 5px;
+  text-decoration: none;
   cursor: pointer;
   transition: all var(--animation-duration);
 }
@@ -5766,11 +5784,11 @@ ul .menu-item a {
   }
 }
 ul .menu-item:hover > a, ul .menu-item.selected > a, ul .menu-item.active > a {
-  color: #CB4053;
+  color: #AA83CC;
   transition: all var(--animation-duration);
 }
 ul .menu-item:hover > a::after, ul .menu-item.selected > a::after, ul .menu-item.active > a::after {
-  border-color: #CB4053;
+  border-color: #AA83CC;
 }
 ul .menu-item ul {
   margin: 0.75rem;

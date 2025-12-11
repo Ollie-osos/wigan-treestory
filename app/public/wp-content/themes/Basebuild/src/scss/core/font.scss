@@ -35,10 +35,12 @@ h6 {
 h1, .h1, h2, .h2 {
 	font-size: 35pt;
     line-height: 50px;
+    margin-bottom: 1.7rem;
     @include head-font();
     @include screen-above('md') {
         font-size: 40pt;
         line-height: 61px;
+        margin-bottom: 2rem;
     }
 }
 
@@ -47,6 +49,7 @@ h3, .h3 {
 	font-size: 20pt;
     line-height: 32px;
     @include head-font();
+    margin-bottom: 0.5rem;
     @include screen-above('md') {
         font-size: 25pt;
         line-height: 37px;

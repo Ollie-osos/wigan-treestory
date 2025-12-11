@@ -25,6 +25,7 @@
     text-transform:none;
     margin-bottom: 1rem;
     outline: none;
+    text-decoration: none;
     /* Base States */
     @include head-font();
     @include screen-below(md){
@@ -35,8 +36,8 @@
         display: inline-block;
     }
     &:hover, &:active {
-        background-color: $red;
-        color: $black;
+        background-color: $black;
+        color: $white;
     }
 
     &:focus {

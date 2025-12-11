@@ -26,7 +26,7 @@ get_header();
                 ?>
 
                         <div class="row u-center" id="timeline_event-<?php echo $count; ?>">
-                            <a href="<?php echo $link; ?>">
+                            <!-- <a href="<?php echo $link; ?>"> -->
                                 <div class="col-sm-12 timeline_row" data-sal="slide-up" data-sal-duration="1000">
 
                                     <div class="image" style="background-image: url('<?php echo $image['sizes']['medium']; ?>')">&nbsp;</div>
@@ -38,31 +38,21 @@ get_header();
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <?php if ($count == 1) { ?>
+                            <!-- </a> -->
+                            <?php if ($count == 0) { ?>
                                 <div class="col-sm-12 timeline_alt_row" data-sal="slide-up" data-sal-duration="1000">
-                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline-speke-hall.png" alt="timeline icon"></div>
-                                    <div class="text"><span class="title_year">1530</span> Speke Hall Construction begins</div>
+                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline/08.png" alt="timeline icon"></div>
+                                    <div class="text"><span class="title_year">1774</span> Leeds and Liverpool Canal reaches Wigan</div>
                                 </div>
-                            <?php }elseif($count == 2) {?>
+                            <?php }elseif($count == 1) {?>
                                 <div class="col-sm-12 timeline_alt_row" data-sal="slide-up" data-sal-duration="1000">                                    
-                                    <div class="text"><span class="title_year">1830</span> Gothic Revival</div>
-                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline-gothic.png" alt="timeline icon"></div>
+                                    <div class="text"><span class="title_year">1872</span> Wigan Warriors Founded</div>
+                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline/07.png" alt="timeline icon"></div>
                                 </div>
                             <?php }elseif($count == 3) {?>
                                 <div class="col-sm-12 timeline_alt_row" data-sal="slide-up" data-sal-duration="1000">
-                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline-crown.png" alt="timeline icon"></div>
-                                    <div class="text"><span class="title_year">1887</span> Queen Victoria's Golden Jubilee</div>
-                                </div>
-                            <?php }elseif($count == 4) {?>
-                                <div class="col-sm-12 timeline_alt_row" data-sal="slide-up" data-sal-duration="1000">                                    
-                                    <div class="text"><span class="title_year">1948</span> HMT Empire Windrush arrives in Britain</div>
-                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline-windrush.png" alt="timeline icon"></div>
-                                </div>
-                                <?php }elseif($count == 5) {?>
-                                <div class="col-sm-12 timeline_alt_row" data-sal="slide-up" data-sal-duration="1000">
-                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline-chinese-arch.png" alt="timeline icon"></div>
-                                    <div class="text"><span class="title_year">2000</span> Chinese Arch built in Liverpool</div>
+                                    <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/timeline/06.png" alt="timeline icon"></div>
+                                    <div class="text"><span class="title_year">2005</span> Wigan Athletic in the Premier League</div>
                                 </div>
                             <?php } ?>
                         </div>

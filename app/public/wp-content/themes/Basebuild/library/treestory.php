@@ -14,7 +14,7 @@ function footer_custom_javascript()
         };
         const myLatlng = {
           lat: 53.5403858570688,
-          lng: -2.81243779405298
+          lng: -2.61243779405298
         };
         const map = new google.maps.Map(document.getElementById("map"), {
           // change the map id when live to our gmap api id
@@ -155,8 +155,8 @@ function footer_custom_javascript()
        */
       function initMap() {
         const myLatlng = {
-          lat: 53.40503858570688,
-          lng: -3.001243779405298
+          lat: 53.5403858570688,
+          lng: -2.61243779405298
         };
         const map = new google.maps.Map(document.getElementById("map"), {
           // mapId: "e41ff799a7370a8e",

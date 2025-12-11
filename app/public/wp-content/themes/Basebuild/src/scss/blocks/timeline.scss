@@ -12,24 +12,24 @@ section#section-timeline {
         position: absolute;
         top: 0;
         width: 400px;
-        height: 3500px;
+        height: 2300px;
         // margin-left:50px;
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 1;
 
         @include screen-below(sm) {
-            height: 4200px;
+            height: 3000px;
         }
     }
 }
 
 .timeline_events {
-    height: 3500px;
+    height: 2300px;
     position: relative;
 
     @include screen-below(sm) {
-        height: 4200px;
+        height: 3000px;
     }
 
     .image {
@@ -97,7 +97,7 @@ section#section-timeline {
 
         .timeline_content {
             display: flex;
-
+            z-index: 10;
             @include screen-below(sm) {
                 padding: 35px 0 30px;
             }

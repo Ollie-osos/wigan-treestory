@@ -34,7 +34,7 @@
 				<div class="header-nav" id="header-menu">
 					<?php foundationpress_main_nav(); ?>
 					<div class="u-flex u-flex-column">
-						<div><a href="/share" class="btn small">Share your TreeStory</a></div>
+						<div class="pb-1"><a href="/share" class="btn small">Share your TreeStory</a></div>
 						<div id="aa">
 							<span onclick="increaseFontSize()" style="font-size: 20px; font-weight: bold">A+  </span>
 							<span onclick="decreaseFontSize()" style="font-size: 20px; font-weight: bold">A-  </span>

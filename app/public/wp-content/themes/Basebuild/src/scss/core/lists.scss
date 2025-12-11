@@ -83,7 +83,7 @@ ul {
         padding: 0.5em 0.75em;
         border-radius: 3px;
         @include small-head();
-        
+        text-decoration: none;
         cursor: pointer;
         transition: all var(--animation-duration);
         @include screen-above(md){
@@ -95,10 +95,10 @@ ul {
     }
 
     .menu-item:hover > a, .menu-item.selected > a, .menu-item.active > a {       
-        color: $red;
+        color: $purple;
         transition: all var(--animation-duration);
         &::after{
-            border-color: $red;
+            border-color: $purple;
         }
     }
 

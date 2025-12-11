@@ -58,11 +58,12 @@
             @include screen-above(md){
                 font-size: 16pt;
             }
+            text-decoration: none;
             transition: all 0.3s linear;
             padding: 0;
             line-height: 35px;
             &:hover {
-                color: $red;
+                color: $purple;
             }
         }
     }
@@ -89,7 +90,7 @@
             padding-bottom: 20px;
         }
         a:link, a:hover, a:active {
-            text-decoration: none;
+            // text-decoration: none;
             cursor: pointer;
             margin-right: 20px;
             &:last-child {
@@ -135,8 +136,14 @@
     justify-content: center;
     cursor: pointer;
     z-index: 100;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: $black;
+        color: $white;
+    }
     @include screen-below(md){
         bottom: 25px;
         right: 25px;
     }
+    
 }
