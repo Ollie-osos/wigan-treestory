@@ -90,7 +90,7 @@ if (!empty($_POST['acf'])) {
 
     $to = $_POST["acf"]["email"];
     $subject = 'Your TreeStory was successfully submitted!';
-    $body = "Thank you for your submission to TreeStory.me Your contribution will add to our collection of amazing stories so far. We'll be in touch as soon as we've approved your Story and it's live.";
+    $body = "Thank you for your submission to TreeStory.me. Your contribution will add to our collection of amazing stories so far. We'll be in touch as soon as we've approved your Story and it's live.";
     $headers = array('Content-Type: text/html; charset=UTF-8');
 
     wp_mail($to, $subject, $body, $headers);
