@@ -14,15 +14,15 @@ get_header(); ?>
                 <div class="row u-center">
                     <div class="col-sm-12 col-md-7 col-lg-5 label"> 
                         <div class="label-inside">
-                            <h3 class="pt-1 pb-3">Explore Treestories</h3>
-                            <p>Click and explore the Wigan Region and read some Treestories from our cotributors so far.</p>
+                            <h3 class="pt-1 pb-3">TreeStories</h3>
+                            <p>Click and explore the Wigan Region and read some TreeStories from our cotributors so far.</p>
                             <h3 class="pb-4">Have your own Story?</h3>
                             <a href="/share" class="btn small">Upload here</a>
                             <p class="pt-3">Need a hand? <br>Let us guide you, explore our How To Guide below and we'll explain how it all works. </p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-5 u-text-center explore-overlay">
-                        <div class="btn large" id="explore" onclick="hideLabel();">Click to explore</div>
+                        <div class="btn large" id="explore" onclick="hideLabel();">Explore</div>
                     </div>
                 </div>
             </div>
