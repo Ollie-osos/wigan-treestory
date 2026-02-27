@@ -25,7 +25,8 @@ if (!empty($_POST['acf'])) {
 
     $attachments_array = array();
     $size = count($_FILES['acf']['name']['photos']);
-    for ($i = 0; $i <= $size; $i++) {
+    // for ($i = 0; $i <= $size; $i++) {
+    for ($i = 0; $i < $size; $i++) {
 
 
         // last upload audio
@@ -59,10 +60,11 @@ if (!empty($_POST['acf'])) {
             'post_mime_type' => $wp_filetype['type'],
             'post_title' => sanitize_file_name($filename),
             'post_content' => '',
-            'post_status' => 'inherit'
+            'post_status' => 'pending'
         );
 
         $attach_id = wp_insert_attachment($attachment, $file);
+        // $attach_id = media_handle_upload('acf[photos]', $post_id);
         require_once(ABSPATH . 'wp-admin/includes/image.php');
         $attach_data = wp_generate_attachment_metadata($attach_id, $file);
         wp_update_attachment_metadata($attach_id, $attach_data);
@@ -233,9 +235,24 @@ get_header(); ?>
                         <div class="g-recaptcha" data-sitekey="6LfJxnYiAAAAAAzPqoiIYFWxd_9C59T1_tsK_t-h"></div>
                     </div>
                     <div class="col-sm-12">
-                        <input type="submit" form="acf-form" value="Complete Upload" class="btn large" style="width: 100%;"></input>
+                        <div id="upload-message" style="display:none; text-align:center; margin-bottom:20px; padding-top:20px;">
+                            <strong>Uploading your story… this may take up to 30 seconds.</strong>
+                        </div>
+                        <!-- <input type="submit" form="acf-form" value="Complete Upload" class="btn large" style="width: 100%;"></input> -->
+                        <input type="submit" 
+                        id="submitBtn"
+                        value="Complete Upload" 
+                        class="btn large" 
+                        style="width: 100%;">
                     </div>
                 </div>
+                <script>
+                    document.getElementById('acf-form').addEventListener('submit', function() {
+                        document.getElementById('upload-message').style.display = 'block';
+                        const btn = document.getElementById('submitBtn');
+                        btn.disabled = true;
+                    });
+                </script>
                 
             </form>
 
